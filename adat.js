@@ -1,40 +1,37 @@
- const TERMEK = [
+export const TERMEKEK = [
     {
-        kep: src="kep/nokia.jpg",
-        nev:"Nokia",
+        kep: "kepek/polo1.jpg",
+        nev:"Retro Gamer férfi póló",
         leiras: "feugiat mauris sit amet orci hendrerit.",
-        ar: 69900,
+        ar: 6990,
         db:45
     },
     {
-        nev:"Alcatel",
+        kep: "kepek/polo2.jpg",
+        nev:"Túléltéltem még egy meetinget",
         leiras: "feugiat mauris sit amet orci hendrerit.",
-        ar: 69900,
+        ar: 8990,
         db:50
     },
     {
-        nev:"Samsung",
+        kep: "kepek/polo3.jpg",
+        nev:"Az éveim múlásával",
         leiras: "feugiat mauris sit amet orci hendrerit.",
-        ar: 69900,
+        ar: 7990,
         db:35
     },
     {
-        nev:"Motorola",
+        kep: "kepek/polo4.jpg",
+        nev:"I hate...",
         leiras: "feugiat mauris sit amet orci hendrerit.",
-        ar: 69900,
+        ar: 5990,
         db:10
     },
     {
-        nev:"Blackberry",
+        kep: "kepek/polo5.jpg",
+        nev:"Képzeld el az életet...",
         leiras: "feugiat mauris sit amet orci hendrerit.",
-        ar: 69900,
+        ar: 4990,
         db:20
-    },{
-        nev:"Nokia",
-        leiras: "feugiat mauris sit amet orci hendrerit.",
-        ar: 69900,
-        db:40
     },
-    
-
 ];
