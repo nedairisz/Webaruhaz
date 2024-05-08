@@ -35,41 +35,6 @@ megjelenit(kartyak)
 
 
 
-/* let kosar = [];
-
-
-export function kosarOsszeallit(lista) {
-  let txt = "<table class='table'>";
-  txt += "<thead><tr><th>Termék neve</th><th>Ár</th><th>Törlés</th></tr></thead>";
-  txt += "<tbody>";
-  lista.forEach((element, index) => {
-    txt += `<tr>`;
-    txt += `<td>${element.nev}</td>`;
-    txt += `<td>${element.ar}</td>`;
-    txt += `<td><button id="${index}" type="button" class="gombTORLES">Törlés</button></td>`;
-    txt += `</tr>`;
-  });
-  txt += "</tbody></table>";
-  return txt;
-}
-
-function kosarMegjelenit() {
-    const kosarHTML = kosarOsszeallit(kosar);
-    $('#kosar').html(kosarHTML);
-}
-
-
-export function kosarbaRak(lista1, lista2, id) {
-  const aktOBJ = {nev:lista1[id].nev, ar:lista1[id].ar+"ft"}
-  lista2.push(aktOBJ);
-  kosarMegjelenit(); 
-}
-
-
-export function torol(lista, id) {
-  lista.splice(id, 1);
-  kosarMegjelenit(); 
-} */
 
 
 
@@ -185,37 +150,9 @@ export function createTable() {
 }
 
 
-/* export function deleteRow(index) {
-    TERMEKEK.splice(index, 1); 
 
-    const article = document.querySelector('.tablazat');
-    const table = article.querySelector('table');
-    const tbody = table.querySelector('tbody');
-    
-    tbody.innerHTML = ''; 
-
-    for (let i = 0; i < TERMEKEK.length; i++) {
-        const termek = TERMEKEK[i];
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${termek.nev}</td>
-            <td>${termek.leiras}</td>
-            <td>${termek.ar}</td>
-            <td>${termek.db}</td>
-            <td><button onclick="deleteRow(${i})" class="btn btn-danger btn-sm">Törlés</button></td>
-        `;
-        tbody.appendChild(row);
-    }
-} */
 
 createTable();
-
-
-
-
-
-
-
 
 
 

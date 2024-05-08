@@ -59,7 +59,7 @@
         <div class="container-fluid justify-content-end" style="width: 100%;">
             <article class="container mt-3" style="width: 80%;">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <!-- Itt lehetnek a cikkek -->
+                    
                 </div>
             </article>
         </div>
@@ -84,37 +84,3 @@
 
 
 
-export function sorBeszur(lista){
-        
-    const submitELEM = $("#submit");
-    submitELEM.on("click", function(event){
-        event.preventDefault();
-
-        const adat = {
-            nev: $("#nev").val(),
-            leiras: $("#leiras").val(),
-            ar: $("#ar").val(),
-            db: $("#Db").val(),
-            kep: $("#kep").val()
-        };
-        console.log($(".valid-feedback").eq(0).css("display"))
-        if($(".valid-feedback").eq(0).css("display") === "block" && 
-        $(".valid-feedback").eq(1).css("display") === "block"){
-            lista.push(adat);
-            init(lista)
-        }
-    });
-}
-export function torol(lista, index){
-    lista.splice(index, 1);
-    return lista;
-}
-export function torolEsemeny(lista) {
-    const TOROL_ELEM = $(".torol");
-    TOROL_ELEM.on("click", function (evt) {
-      let index = evt.target.id;
-      console.log(index);
-      const UJ_LISTA = torol(lista, index);
-      init(UJ_LISTA);
-    });
-  }
