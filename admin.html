@@ -35,6 +35,43 @@
                 </ul>
             </div>
         </nav>
+
+        <article>
+            <div class="urlap mx-auto" style="width: 80%;">
+                <form class="was-validated">
+                    <div class="mb-3 mt-3">
+                        <label for="nev" class="form-label">Név:</label>
+                        <input type="text" class="form-control" id="nev" required name="nev" pattern=".{3,}"/>
+                        <div class="valid-feedback">Ok.</div>
+                        <div class="invalid-feedback"> A név legalább 3 betű kell legyen</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="leiras" class="form-label">Leírás:</label>
+                        <input id="leiras" type="text" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="ar" class="form-label">Ár:</label>
+                        <input type="number" class="form-control" id="ar" required name="ar" />
+                        <div class="valid-feedback">Ok.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ar" class="form-label">Mennyiség:</label>
+                        <input type="number" class="form-control" id="db" required name="db" />
+                        <div class="valid-feedback">Ok.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="kep" class="form-label">Kép</label>
+                        <input id="kep" type="text" class="form-control" value="./kepek/.jpg" enabled/>
+                    </div>
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-primary"> Hozzáad </button>
+                </form>
+            </div>
+
+            <div class="adatok"></div>
+        </article>
+
         <footer class="bg-light text-dark py-4 mt-2 text-center" style="height: 8vh;">@ Minden jog fenntartva</footer>
     </main>  
 </body>

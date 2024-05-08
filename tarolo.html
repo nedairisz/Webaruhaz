@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="row">
-        <div class="container-fluid" style="max-width: 80%;">
+    <main class="row mx-auto" style="width: 100%;">
+        <div class="container-fluid" style="width: 100%;">
             <header style="background-color: green;">
                 <div class="header" style="width: 100%;"><h1>Webáruház</h1></div>
             </header>
         </div>
-    
-        <div class="container-fluid" style="max-width: 80%;">
+
+        <div class="container-fluid" style="width: 100%;">
             <nav class="navbar navbar-expand-sm bg-light navbar-light">
                 <div class="container-fluid">
                     <ul class="navbar-nav me-auto">
@@ -32,14 +32,15 @@
                             <a class="nav-link active" href="admin.html">Admin</a>
                         </li>
                     </ul>
+                    
                 </div>
             </nav>
         </div>
 
-        <aside class="container-fluid" style="max-width: 80%;">
+        <aside class="container-fluid" style="width: 80%;">
             <div class="termek-valtozo" style="width: 100%;">
-                <div class="container d-flex gap-4 p-3" style="width: 100%;" >
-                    <div class="py-2" >
+                <div class="container d-flex gap-4 p-3 border-bottom bg-white" style="width: 100%;">
+                    <div class="py-2">
                         <select class="form-select rendezesSzempontok">
                             <option>Rendezési szempontok</option>
                             <option value="novekvo">Ár szerint növekvő</option>
@@ -54,15 +55,17 @@
             </div>
         </aside>
         
-        <article class="col-lg-6 offset-lg-3"> <!-- <article class="col-lg-6 text-start"></article> -->
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-               
-            </div>
-        </article>
+
+        <div class="container-fluid justify-content-end" style="width: 100%;">
+            <article class="container mt-3" style="width: 80%;">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- Itt lehetnek a cikkek -->
+                </div>
+            </article>
+        </div>
         
-        <aside class="col-lg-2" id="kosar">
-            <h5>Kosár</h5>
-            <button style="border-radius: 5px; border: 0.5px solid lightgray; background: white;">Vásárlás befejezése</button>
+        <aside>
+            <h3>Kosár</h3>
         </aside>
 
         <div class="container-fluid" style="width: 100%;">
@@ -71,3 +74,47 @@
     </main>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+export function sorBeszur(lista){
+        
+    const submitELEM = $("#submit");
+    submitELEM.on("click", function(event){
+        event.preventDefault();
+
+        const adat = {
+            nev: $("#nev").val(),
+            leiras: $("#leiras").val(),
+            ar: $("#ar").val(),
+            db: $("#Db").val(),
+            kep: $("#kep").val()
+        };
+        console.log($(".valid-feedback").eq(0).css("display"))
+        if($(".valid-feedback").eq(0).css("display") === "block" && 
+        $(".valid-feedback").eq(1).css("display") === "block"){
+            lista.push(adat);
+            init(lista)
+        }
+    });
+}
+export function torol(lista, index){
+    lista.splice(index, 1);
+    return lista;
+}
+export function torolEsemeny(lista) {
+    const TOROL_ELEM = $(".torol");
+    TOROL_ELEM.on("click", function (evt) {
+      let index = evt.target.id;
+      console.log(index);
+      const UJ_LISTA = torol(lista, index);
+      init(UJ_LISTA);
+    });
+  }
